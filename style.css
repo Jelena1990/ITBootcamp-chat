@@ -1,0 +1,425 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background: url(bricks.jpg);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container {
+  margin-top: 30px;
+}
+/* navbar*/
+.btn {
+  display: inline-block;
+  background-color: #ad5a76;
+  color: white;
+  border-radius: 5px;
+  width: 150px;
+  padding: 5px 0 5px 0;
+  margin-bottom: 30px;
+  border: none;
+}
+.active {
+  background: pink;
+}
+
+.btn:hover,
+#btnSendM:hover,
+#btnUpadteU:hover {
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+/* naslov  */
+.neon {
+  color: #fff;
+  margin-left: 50%;
+  padding-top: 200px;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  text-shadow: 0 0 20px #ff005b;
+  position: relative;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.neon:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 200px;
+  z-index: -1;
+  color: #ff005b;
+  filter: blur(10px);
+}
+neon:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #fe3a80;
+  z-index: -2;
+  opacity: 0.5;
+  filter: blur(25px);
+}
+
+h2 {
+  color: white;
+  font-size: 40px;
+  font-weight: 800;
+  margin-top: -110px;
+}
+ul {
+  border: 1px solid white;
+  list-style: none;
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 33%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+ul li {
+  overflow: hidden;
+  margin-bottom: 20px;
+  font-size: 16px;
+  letter-spacing: 0.1;
+  position: relative;
+}
+
+.bin {
+  width: 20px;
+  display: inline-block;
+  margin-right: -110px;
+}
+
+.btn-img {
+  border-style: none;
+}
+
+.left {
+  background-color: #ff8787;
+  color: whitesmoke;
+  margin: 5px;
+  padding: 7px 0 7px 0;
+  border-radius: 0px 20px 20px 20px;
+  width: 49%;
+  float: left;
+}
+
+.right {
+  background-color: #ffe066;
+  display: block;
+  color: #974e67;
+  margin: 5px;
+  padding: 7px 0 7px 0;
+  width: 49%;
+  float: right;
+  border-radius: 20px 0px 20px 20px;
+}
+/* stil za li */
+.username {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.date {
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.message {
+  font-weight: 300;
+}
+
+input
+/* #noviNacin{ */ {
+  width: 30%;
+  background-color: #fff3f3;
+  border-radius: 5px;
+  padding: 2px;
+  margin-bottom: 5px;
+  padding: 5px 0 5px 0;
+  margin-bottom: 20px;
+  outline: none;
+  /* border-radius: 5px; */
+}
+
+#inputM {
+  margin-top: 30px;
+}
+
+::placeholder {
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  padding-left: 25px;
+}
+
+#btnSendM,
+#btnUpadteU {
+  width: 7%;
+  background: linear-gradient(90deg, #de6262, #ffb88c);
+  color: white;
+  /* border-radius:5px; */
+  font-weight: 600;
+}
+
+/* #btnColor{
+    width:7%;
+     background-color:#ffb88c;
+     color:white;
+     border-radius:5px;
+     font-weight:600;
+     margin-bottom:-60px;
+} */
+
+#btnUpadteU {
+  background: linear-gradient(90deg, #ba5370, #f4e2d8);
+}
+
+/*slika*/
+#left {
+  position: absolute;
+  bottom: 1%;
+  left: 0%;
+  width: 370px;
+}
+
+.show {
+  width: 50px;
+  color: white;
+  font-size: 20px;
+  bottom: 1%;
+}
+
+/* MEDIA QUERY ZA MOBILNI */
+
+@media only screen and (max-width: 425px) {
+  .container {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 40px;
+    margin: 50px 10px;
+    z-index: 99;
+  }
+  input/*,#noviNacin */ {
+    height: 25px;
+  }
+  .row {
+    width: 80%;
+    margin: 20px 40px;
+    text-align: center;
+  }
+
+  [class*="col-"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .input_submit {
+    margin: 0;
+  }
+
+  .col-m-1 {
+    width: 8.33%;
+  }
+  .col-m-2 {
+    width: 16.66%;
+  }
+  .col-m-3 {
+    width: 25%;
+  }
+  .col-m-4 {
+    width: 33.33%;
+  }
+  .col-m-5 {
+    width: 41.66%;
+  }
+  .col-m-6 {
+    width: 50%;
+  }
+  .col-m-7 {
+    width: 58.33%;
+  }
+  .col-m-8 {
+    width: 66.66%;
+  }
+  .col-m-9 {
+    width: 75%;
+  }
+  .col-m-10 {
+    width: 83.33%;
+  }
+  .col-m-11 {
+    width: 91.66%;
+  }
+  .col-m-12 {
+    width: 100%;
+  }
+  #ul {
+    width: 100%;
+  }
+  .neon {
+    width: max-content;
+    font-size: 25px;
+    padding-left: 100%;
+  }
+  .neon::before,
+  .neon::after {
+    width: max-content;
+    padding-left: 60%;
+  }
+  #left {
+    display: none;
+  }
+  #btnSendM,#btnUpadteU /*#btnColor*/ {
+    width: 100%;
+  }
+  #h2 {
+    font-size: 20px;
+    margin-top: -50px;
+  }
+}
+
+/* MEDIA QUERY ZA TABLET */
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .btn {
+    margin: 5px;
+  }
+  .col-t-1 {
+    width: 8.33%;
+  }
+  .col-t-2 {
+    width: 16.66%;
+  }
+  .col-t-3 {
+    width: 25%;
+  }
+  .col-t-4 {
+    width: 33.33%;
+  }
+  .col-t-5 {
+    width: 41.66%;
+  }
+  .col-t-6 {
+    width: 50%;
+  }
+  .col-t-7 {
+    width: 58.33%;
+  }
+  .col-t-8 {
+    width: 66.66%;
+  }
+  .col-t-9 {
+    width: 75%;
+  }
+  .col-t-10 {
+    width: 83.33%;
+  }
+  .col-t-11 {
+    width: 91.66%;
+  }
+  .col-t-12 {
+    width: 100%;
+  }
+  #left {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+
+  .btn {
+    margin: 5px;
+  }
+  .col-l-1 {
+    width: 8.33%;
+  }
+  .col-l-2 {
+    width: 16.66%;
+  }
+  .col-l-3 {
+    width: 25%;
+  }
+  .col-l-4 {
+    width: 33.33%;
+  }
+  .col-l-5 {
+    width: 41.66%;
+  }
+  .col-l-6 {
+    width: 50%;
+  }
+  .col-l-7 {
+    width: 58.33%;
+  }
+  .col-l-8 {
+    width: 66.66%;
+  }
+  .col-l-9 {
+    width: 75%;
+  }
+  .col-l-10 {
+    width: 83.33%;
+  }
+  .col-l-11 {
+    width: 91.66%;
+  }
+  .col-l-12 {
+    width: 100%;
+  }
+  #left {
+    display: none;
+  }
+  #ul {
+    width: 70%;
+  }
+  #nav {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 10%;
+  }
+  #h2 {
+    margin-right: 16%;
+  }
+  .neon {
+    margin-left: 41%;
+  }
+  #btnSendM,
+  #btnUpadteU/*,
+  #btnColor*/ {
+    width: 20%;
+  }
+  #inputM,
+  #inputU
+  /*#changeColor,
+  #noviNacin*/ {
+    width: 40%;
+  }
+  #left {
+    width: 200px;
+  }
+}

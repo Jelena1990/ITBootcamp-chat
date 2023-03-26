@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,100;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>Chat projekat</title>
+  </head>
+  <body>
+    <header class="row">
+      <h1 class="neon col-m-12" data-text="ITBootcamp Chat">ITBootcamp Chat</h1>
+      <h2 class="col-m-12" id="h2">Choose a chatroom</h2>
+    </header>
+
+    <div class="container">
+      <nav id="nav" class="row">
+        <button class="btn col-m-12 col-t-4">#general</button>
+        <button class="btn col-m-12 col-t-4">#js</button>
+        <button class="btn col-m-12 col-t-4">#homeworks</button>
+        <button class="btn col-m-12 col-t-4">#tests</button>
+      </nav>
+
+      <section class="chatSection" id="background">
+        <ul id="ul"></ul>
+      </section>
+      <div id="obavestenje"></div>
+
+      <!-- <form class="row" id="chooseColor">
+        <input type="color"  value="f7f7f7" id="changeColor" class="input-text col-m-12">
+        <input type="submit" value="Change" id="btnColor" class="input_submit col-m-12">
+      </form> -->
+
+      <form class="row" id="formaMsg">
+        <input
+          type="text"
+          placeholder="Your message"
+          id="inputM"
+          class="input-text col-m-12"
+        />
+        <!-- <textarea name="novaPoruka" id="noviNacin" ></textarea> -->
+        <input
+          type="submit"
+          value="Send"
+          id="btnSendM"
+          class="input_submit col-m-12"
+        />
+      </form>
+
+      <form class="row" id="formaUpdate">
+        <input
+          type="text"
+          placeholder="Update username"
+          id="inputU"
+          class="input-text col-m-12"
+        />
+        <input type="submit" id="btnUpadteU" class="input_submit col-m-12" />
+      </form>
+
+      <audio id="audio" style="display: none" src="msgsound.mp3"></audio>
+      <img id="left" src="left.png" />
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyA_ZcWaaQhrnhX21w6f0RzWzV3EvHeKI90",
+        authDomain: "jelena--prvi-projekat.firebaseapp.com",
+        projectId: "jelena--prvi-projekat",
+        storageBucket: "jelena--prvi-projekat.appspot.com",
+        messagingSenderId: "467170208444",
+        appId: "1:467170208444:web:7a4e3948849154d6f6feb9",
+        measurementId: "G-TELB3W3PZL",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      let db = firebase.firestore();
+    </script>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
