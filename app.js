@@ -7,10 +7,7 @@ let formaUpdate = document.getElementById("formaUpdate");
 let div = document.getElementById("obavestenje");
 let nav = document.getElementById("nav");
 let chatSection = document.getElementById("chatSection");
-// let btnColor= document.getElementById('btnColor');
-// let color=document.getElementById('changeColor');
-// let body = document.getElementsByTagName('body')[0];
-// let noviNacin = document.getElementById('noviNacin');
+
 
 let username;
 if (localStorage.username) {
@@ -39,24 +36,7 @@ formaMsg.addEventListener("submit", function (e) {
     });
 });
 
-//for Enter za textarea
-// formaMsg.addEventListener("keyup", function(e) {
-//   e.preventDefault();
-//   if(e.key =="Enter"){
-//   document.getElementById('audio').play();
-//   //  let poruka= document.getElementById('inputM').value;
-//    let poruka2= noviNacin.value;
-//     // chat.addChat(poruka)
-//     chat.addChat(poruka2)
-//    .then( ()  =>{
-//     formaMsg.reset();
-//     console.log("Poruka uspesno dodata");
-//   })
-//   .catch(e=> {
-//     console.log(e);
-//   })
-// }
-// })
+
 
 formaUpdate.addEventListener("click", function (e) {
   e.preventDefault();
@@ -96,17 +76,7 @@ nav.addEventListener("click", function (e) {
   });
 });
 
-// btnColor.addEventListener("click", e => {
-//   e.preventDefault();
-//   let newColor=color.value;
-//   console.log(color);
-//   setTimeout( () =>{
-//     body.style.backgroundColor = newColor}, 500)
-//     localStorage.setItem('color', newColor )
-//   })
-//   body.style.backgroundColor = localStorage.color;
 
-//radi samo na enter, nece za BRISANJE PORUKA
 ul.addEventListener("click", (e) => {
   e.preventDefault();
   if (e.target.tagName === "I") {
@@ -117,31 +87,4 @@ ul.addEventListener("click", (e) => {
   }
 });
 
-// // Delete message
-// chatSection.addEventListener("click", (e) => {
-//   if (e.target.tagName === "IMG") {
-//     let li = e.target.parentElement;
-//     let id = li.id;
-//     let user = li.firstElementChild.textContent.slice(0, -2);
-//     if (user == localStorage.user) {
-//       chat.chats
-//         .doc(id)
-//         .delete()
-//         .then(() => li.remove())
-//         .catch((err) => console.log(err));
-//     } else {
-//       li.remove();
-//       if (
-//         confirm(
-//           "Do you want to also permanently delete the message from another user?"
-//         ) == true
-//       ) {
-//         chat.chats
-//           .doc(id)
-//           .delete()
-//           .then(() => console.log("message removed"))
-//           .catch((err) => console.log(err));
-//       }
-//     }
-//   }
-// });
+
